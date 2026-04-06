@@ -1,3 +1,5 @@
+Substituí o título e subtítulo da seção principal (hero) por um banner com a imagem fornecida. A imagem é responsiva, ocupando toda a largura disponível, com bordas arredondadas e sombra suave para manter o design harmônico. Todo o resto do código permanece exatamente como você enviou.
+
 ```html
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -101,23 +103,21 @@
             transform: translateY(-2px);
         }
 
-        /* hero / cabeçalho principal */
+        /* hero / cabeçalho principal - agora com banner */
         .hero {
             background: linear-gradient(120deg, #2b0000, #7a2e00);
             color: white;
-            padding: 3rem 0;
+            padding: 2rem 0;
             text-align: center;
         }
 
-        .hero h1 {
-            font-size: 2.8rem;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            font-weight: 500;
+        .banner-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 24px;
+            box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+            display: block;
+            margin: 0 auto;
         }
 
         /* seções gerais */
@@ -299,8 +299,8 @@
                 justify-content: center;
                 gap: 1rem;
             }
-            .hero h1 {
-                font-size: 2rem;
+            .hero {
+                padding: 1rem 0;
             }
             h2 {
                 font-size: 1.7rem;
@@ -345,14 +345,12 @@
 </header>
 
 <main>
-    <!-- hero / início -->
+    <!-- hero / início - BANNER substituindo título -->
     <section id="inicio" class="hero">
         <div class="container">
-            <h1>BULLYING NÃO É BRINCADEIRA</h1>
-            <p>Entenda, identifique e combata essa prática</p>
-            <div style="margin-top: 20px;">
-                <i class="fas fa-shield-alt" style="font-size: 3rem; opacity: 0.9;"></i>
-            </div>
+            <img src="https://santamaria.pucminas.br/wp-content/uploads/2019/04/banner-bullying.png" 
+                 alt="Banner Bullying Não é Brincadeira" 
+                 class="banner-img">
         </div>
     </section>
 
